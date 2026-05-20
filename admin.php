@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-// APPROVE
+
 
 if(isset($_GET['approve'])){
 
@@ -15,7 +15,7 @@ if(isset($_GET['approve'])){
     );
 }
 
-// REJECT
+
 
 if(isset($_GET['reject'])){
 
@@ -29,7 +29,7 @@ if(isset($_GET['reject'])){
     );
 }
 
-// LEARN TO RANK SORTING
+
 
 $result = mysqli_query(
     $conn,
@@ -104,7 +104,7 @@ a{
 
 <h2 align="center">
 
-Barangay Admin Dashboard
+
 
 </h2>
 
@@ -163,7 +163,7 @@ mysqli_fetch_assoc($result)){ ?>
 href="<?php echo $row['document_path']; ?>"
 target="_blank">
 
-View File
+
 
 </a>
 

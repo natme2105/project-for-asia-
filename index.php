@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
 
     $request_type = $_POST['request_type'];
 
-    // MACHINE LEARNING PREDICTION
+    
 
     $command = "python ml/predict.py \"$request_type\"";
 
@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
 
     $priority = floatval($priority);
 
-    // CREATE uploads FOLDER
+    
 
     if(!file_exists('uploads')){
 
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 
     $tempname = $_FILES['document']['tmp_name'];
 
-    // NEW FILE NAME
+    
 
     $newname = time() . "_" . $filename;
 
@@ -40,7 +40,7 @@ if(isset($_POST['submit'])){
 
     if(move_uploaded_file($tempname,$folder)){
 
-        // SAVE TO DATABASE
+      
 
         $sql = "INSERT INTO requests
         (
@@ -248,7 +248,7 @@ enctype="multipart/form-data">
 
 <?php
 
-// GET REQUESTS
+
 
 $result = mysqli_query(
     $conn,
@@ -309,7 +309,7 @@ mysqli_fetch_assoc($result)){ ?>
 href="<?php echo $row['document_path']; ?>"
 target="_blank">
 
-View File
+
 
 </a>
 
