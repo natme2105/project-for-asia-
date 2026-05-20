@@ -1,0 +1,9 @@
+request_type,priority
+Emergency,10
+Medical,9
+Senior,8
+Clearance,5
+Emergency,10
+Medical,9
+Senior,8
+Clearance,5
